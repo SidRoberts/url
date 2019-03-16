@@ -2,12 +2,12 @@
 
 namespace Sid\Url\Twig;
 
-use Twig_Extension;
-use Twig_SimpleFunction;
+use Twig\Extension\AbstractExtension;
+use Twig\TwigFunction;
 
 use Sid\Url\Url;
 
-class UrlExtension extends Twig_Extension
+class UrlExtension extends AbstractExtension
 {
     /**
      * @var Url
@@ -26,7 +26,7 @@ class UrlExtension extends Twig_Extension
     public function getFunctions()
     {
         return [
-            new Twig_SimpleFunction(
+            new TwigFunction(
                 "url",
                 [
                     $this->url,

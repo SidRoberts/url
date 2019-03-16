@@ -5,8 +5,7 @@ namespace Sid\Url\Test\Unit\Twig;
 use Sid\Url\Url;
 use Sid\Url\Twig\UrlExtension;
 
-use Twig_Loader_Array;
-use Twig_Environment;
+use Twig\Loader\ArrayLoader;
 
 class UrlExtensionTest extends \Codeception\TestCase\Test
 {
@@ -19,13 +18,13 @@ class UrlExtensionTest extends \Codeception\TestCase\Test
 
 
 
-        $loader = new Twig_Loader_Array(
+        $loader = new ArrayLoader(
             [
                 "template" => "{{ url(url) }}",
             ]
         );
 
-        $twig = new Twig_Environment($loader);
+        $twig = new \Twig\Environment($loader);
 
 
 
