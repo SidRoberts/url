@@ -2,12 +2,14 @@
 
 namespace Sid\Url\Test\Unit\Twig;
 
+use Codeception\TestCase\Test;
+
 use Sid\Url\Url;
 use Sid\Url\Twig\UrlExtension;
 
 use Twig\Loader\ArrayLoader;
 
-class UrlExtensionTest extends \Codeception\TestCase\Test
+class UrlExtensionTest extends Test
 {
     /**
      * @dataProvider provider

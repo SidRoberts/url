@@ -2,9 +2,10 @@
 
 namespace Sid\Url\Test\Unit;
 
+use Codeception\TestCase\Test;
 use Sid\Url\Url;
 
-class UrlTest extends \Codeception\TestCase\Test
+class UrlTest extends Test
 {
     public function testGetBaseUrl()
     {
