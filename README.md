@@ -25,10 +25,10 @@ $baseUri = "https://example.com";
 $url = new \Sid\Url\Url($baseUri);
 
 // https://example.com/path/to/something
-echo $url->get('path/to/something');
+echo $url->get("path/to/something");
 
 // https://example.com/path/to/something
-echo $url->get('/path/to/something');
+echo $url->get("/path/to/something");
 ```
 
 You can now easily change your base URI depending on the environment (for
