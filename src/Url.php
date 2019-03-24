@@ -25,9 +25,19 @@ class Url
 
 
 
-    public function get(string $uri = "") : string
+    public function get(string $uri = "", array $arguments = []) : string
     {
         $uri = rtrim($this->baseUri, "/") . "/" . ltrim($uri, "/");
+
+        $queryString = http_build_query($arguments);
+
+        if (strlen($queryString) > 0) {
+            if (strpos($uri, "?") !== false) {
+                $uri .= "&" . $queryString;
+            } else {
+                $uri .= "?" . $queryString;
+            }
+        }
 
         return $uri;
     }
