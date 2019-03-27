@@ -2,8 +2,14 @@
 
 URL generator.
 
-[![Build Status](https://travis-ci.org/SidRoberts/url.svg?branch=master)](https://travis-ci.org/SidRoberts/url)
-[![GitHub tag](https://img.shields.io/github/tag/sidroberts/url.svg?maxAge=2592000)]()
+[![Build Status](https://img.shields.io/travis/SidRoberts/url/2.0.x.svg?style=for-the-badge)](https://travis-ci.org/SidRoberts/url)
+[![GitHub release](https://img.shields.io/github/release/SidRoberts/url.svg?style=for-the-badge)]()
+
+[![License](https://img.shields.io/github/license/SidRoberts/url.svg?style=for-the-badge)]()
+
+[![GitHub issues](https://img.shields.io/github/issues-raw/SidRoberts/url.svg?style=for-the-badge)]()
+[![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/SidRoberts/url.svg?style=for-the-badge)]()
+
 
 
 
