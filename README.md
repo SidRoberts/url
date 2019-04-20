@@ -7,8 +7,8 @@ URL generator.
 
 [![License](https://img.shields.io/github/license/SidRoberts/url.svg?style=for-the-badge)]()
 
-[![GitHub issues](https://img.shields.io/github/issues-raw/SidRoberts/url.svg?style=for-the-badge)]()
-[![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/SidRoberts/url.svg?style=for-the-badge)]()
+[![GitHub issues](https://img.shields.io/github/issues-raw/SidRoberts/url.svg?style=for-the-badge)](https://github.com/SidRoberts/url/issues)
+[![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/SidRoberts/url.svg?style=for-the-badge)](https://github.com/SidRoberts/url/pulls)
 
 
 
