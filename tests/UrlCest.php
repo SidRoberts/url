@@ -1,13 +1,13 @@
 <?php
 
-namespace Sid\Url\Test\Unit;
+namespace Tests;
 
-use Codeception\TestCase\Test;
+use Codeception\Example;
 use Sid\Url\Url;
 
-class UrlTest extends Test
+class UrlCest
 {
-    public function testGetBaseUrl()
+    public function getBaseUrl(UnitTester $I)
     {
         $baseUri = "http://www.example.com";
 
@@ -15,7 +15,7 @@ class UrlTest extends Test
 
         $url = new Url($baseUri);
 
-        $this->assertEquals(
+        $I->assertEquals(
             $baseUri,
             $url->getBaseUri()
         );
@@ -24,16 +24,20 @@ class UrlTest extends Test
     /**
      * @dataProvider providerUrl
      */
-    public function testUrl(string $baseUri, string $expected, string $uri)
+    public function url(UnitTester $I, Example $example)
     {
-        $url = new Url($baseUri);
+        $url = new Url(
+            $example["baseUri"]
+        );
 
-        $actual = $url->get($uri);
+        $actual = $url->get(
+            $example["uri"]
+        );
 
 
 
-        $this->assertEquals(
-            $expected,
+        $I->assertEquals(
+            $example["expected"],
             $actual
         );
     }
@@ -84,16 +88,19 @@ class UrlTest extends Test
     /**
      * @dataProvider providerArguments
      */
-    public function testArguments(string $expected, string $uri, array $arguments)
+    public function arguments(UnitTester $I, Example $example)
     {
         $url = new Url();
 
-        $actual = $url->get($uri, $arguments);
+        $actual = $url->get(
+            $example["uri"],
+            $example["arguments"]
+        );
 
 
 
-        $this->assertEquals(
-            $expected,
+        $I->assertEquals(
+            $example["expected"],
             $actual
         );
     }

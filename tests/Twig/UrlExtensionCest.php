@@ -1,22 +1,23 @@
 <?php
 
-namespace Sid\Url\Test\Unit\Twig;
+namespace Tests\Twig;
 
-use Codeception\TestCase\Test;
-
+use Codeception\Example;
 use Sid\Url\Url;
 use Sid\Url\Twig\UrlExtension;
-
+use Tests\UnitTester;
 use Twig\Loader\ArrayLoader;
 
-class UrlExtensionTest extends Test
+class UrlExtensionCest
 {
     /**
      * @dataProvider provider
      */
-    public function testExtension(string $baseUri, string $expected, string $uri)
+    public function extension(UnitTester $I, Example $example)
     {
-        $url = new Url($baseUri);
+        $url = new Url(
+            $example["baseUri"]
+        );
 
 
 
@@ -39,19 +40,19 @@ class UrlExtensionTest extends Test
         $actual = $twig->render(
             "template",
             [
-                "url" => $uri
+                "url" => $example["uri"],
             ]
         );
 
 
 
-        $this->assertEquals(
-            $expected,
+        $I->assertEquals(
+            $example["expected"],
             $actual
         );
     }
 
-    public function provider()
+    protected function provider() : array
     {
         return [
             [
